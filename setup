@@ -1,3 +1,9 @@
 #!/bin/bash
 
+pushd ~/utils/metrics/overhead
+make process-overhead-test
+popd
+
+ln -s ~/utils/metrics/overhead/process-overhead-test ~/bin/
+
 
