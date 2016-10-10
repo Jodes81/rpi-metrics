@@ -6,4 +6,11 @@ popd
 
 ln -s ~/utils/metrics/overhead/process-overhead-test ~/bin/
 
+pushd ~/utils/metrics/gpio
+make gpio-toggle-test
+make uart-printf-test
+popd
+
+ln -s ~/utils/metrics/gpio/gpio-toggle-test ~/bin/
+ln -s ~/utils/metrics/gpio/uart-printf-test ~/bin/
 
