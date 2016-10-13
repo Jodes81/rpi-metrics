@@ -1,13 +1,19 @@
 #!/bin/bash
 
+echo
+echo "--- Metrics: Making process-overhead-test --- "
+
 pushd ~/utils/metrics/overhead
 make process-overhead-test
 popd
 
 ln -s ~/utils/metrics/overhead/process-overhead-test ~/bin/
 
+echo
+echo "--- Metrics: Making gpio tests --- "
+
 pushd ~/utils/metrics/gpio
-make gpio-toggle-test
+gcc -o gpio-toggle-test gpio-toggle-test.c -lwiringPi
 make uart-printf-test
 popd
 
